@@ -16,5 +16,8 @@ main = do
     
     BLC.putStrLn $ "Listening on " <> BLC.pack host <> ":" <> BLC.pack port
     
-    serve (Host host) port $ \(serverSocket, serverAddr) ->
+    serve (Host host) port $ \(serverSocket, serverAddr) -> do
          BLC.putStrLn $ "Accepted connection from " <> BLC.pack (show serverAddr) <> "."
+         _ <- recv serverSocket 4096
+         send serverSocket "HTTP/1.1 200 OK\r\n\r\n"
+        
