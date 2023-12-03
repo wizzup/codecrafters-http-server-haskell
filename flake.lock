@@ -1,0 +1,44 @@
+{
+  "nodes": {
+    "cc-tester": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1700211842,
+        "narHash": "sha256-qxIxjEfJXicvtso4RcodJU2nWSVPrGWfIvCiL3kWAX4=",
+        "owner": "codecrafters-io",
+        "repo": "http-server-tester",
+        "rev": "47a03d2ddb157af08c63d5a5b423c034067d8142",
+        "type": "github"
+      },
+      "original": {
+        "owner": "codecrafters-io",
+        "repo": "http-server-tester",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1701253981,
+        "narHash": "sha256-ztaDIyZ7HrTAfEEUt9AtTDNoCYxUdSd6NrRHaYOIxtk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e92039b55bcd58469325ded85d4f58dd5a4eaf58",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "cc-tester": "cc-tester",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

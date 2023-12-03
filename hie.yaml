@@ -1,0 +1,7 @@
+cradle:
+  cabal:
+    - path: "app/Main.hs"
+      component: "hs-http-server-clone:exe:hs-http-server-clone-exe"
+
+    - path: "app/Paths_hs_http_server_clone.hs"
+      component: "hs-http-server-clone:exe:hs-http-server-clone-exe"
