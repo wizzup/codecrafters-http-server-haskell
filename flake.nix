@@ -54,14 +54,14 @@
     # from codecrafters-io/http-server-tester/main/internal/tester_definition.go
     # TODO: auto generate
     test_case = ''
-      [{"slug":"connect-to-port","tester_log_prefix":"01/15","title":"connect-to-port"}
-      ,{"slug":"respond-with-200","tester_log_prefix":"02/15","title":"respond-with-200"}
-      ,{"slug":"respond-with-404","tester_log_prefix":"03/15","title":"respond-with-404"}
-      ,{"slug":"respond-with-content","tester_log_prefix":"04/15","title":"respond-with-content"}
-      ,{"slug":"parse-headers","tester_log_prefix":"05/15","title":"parse-headers"}
-      ,{"slug":"concurrent-connections","tester_log_prefix":"06/15","title":"concurrent-connections"}
-      ,{"slug":"get-file","tester_log_prefix":"07/15","title":"get-file"}
-      ,{"slug":"post-file","tester_log_prefix":"08/15","title":"post-file"}
+      [{"slug":"connect-to-port","tester_log_prefix":"1/8","title":"connect-to-port"}
+      ,{"slug":"respond-with-200","tester_log_prefix":"2/8","title":"respond-with-200"}
+      ,{"slug":"respond-with-404","tester_log_prefix":"3/8","title":"respond-with-404"}
+      ,{"slug":"respond-with-content","tester_log_prefix":"4/8","title":"respond-with-content"}
+      ,{"slug":"parse-headers","tester_log_prefix":"5/8","title":"parse-headers"}
+      ,{"slug":"concurrent-connections","tester_log_prefix":"6/8","title":"concurrent-connections"}
+      ,{"slug":"get-file","tester_log_prefix":"7/8","title":"get-file"}
+      ,{"slug":"post-file","tester_log_prefix":"8/8","title":"post-file"}
       ]
     '';
 
@@ -82,11 +82,7 @@
       CODECRAFTERS_TEST_CASES_JSON = test_case;
 
       installPhase = ''
-        echo hello > $out
-        pwd >> $out
-        ${pkgs.tree}/bin/tree .  >> $out
         ${tester}/bin/tester 2>&1 | tee $out
-        echo done >> $out
       '';
     };
   in
